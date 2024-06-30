@@ -46,8 +46,8 @@ function ImageGeneratorPage() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-200">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+    <div className="flex flex-col items-center h-full">
+      <div className="bg-white mt-8 p-6 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-2xl font-bold mb-4 text-gray-800">
           Generate Image
         </h1>
@@ -58,7 +58,7 @@ function ImageGeneratorPage() {
             </label>
             <textarea
               id="text"
-              placeholder="Type your text here..."
+              placeholder="Describe una imagen..."
               className="w-full rounded-md border border-gray-300 bg-gray-100 p-2 text-gray-800 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
               rows={3}
               style={{ resize: 'none' }}
@@ -104,6 +104,7 @@ function ImageGeneratorPage() {
           )}
         </div>
       </div>
+      
       {/* {data ? (
         <div className="bg-gray-800 p-4 mt-4 rounded-xl">
           <span>{data}</span>

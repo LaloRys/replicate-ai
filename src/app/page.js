@@ -4,7 +4,7 @@ import ImageGeneratorPage from '../components/ImageGeneratorPage'
 function page() {
   return (
     <div>
-      <ImageGeneratorPage/>
+      Home page
     </div>
   )
 }
