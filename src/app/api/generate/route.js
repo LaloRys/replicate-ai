@@ -16,7 +16,7 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Prompt is required' }, { status: 400 });
     }
 
-    console.log('Running the model with prompt:', prompt);
+    // console.log('Running the model with prompt:', prompt);
     const model = 'stability-ai/sdxl:39ed52f2a78e934b3ba6e2a89f5b1c712de7dfea535525255b1aa35c5565e08b';
     const input = {
       width: 768,
@@ -34,13 +34,11 @@ export async function POST(request) {
       num_inference_steps: 25,
     };
 
-    console.log('Using model: %s', model);
-    console.log('With input: %O', input);
+    // console.log('Using model: %s', model);
+    // console.log('With input: %O', input);
 
-    console.log('Running...');
+    // console.log('Running...');
     const output = await replicate.run(model, { input });
-    console.log('Done!', output);
-
     return NextResponse.json({
       message: 'Model ran successfully!',
       output: output,
