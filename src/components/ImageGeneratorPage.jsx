@@ -19,6 +19,7 @@ function ImageGeneratorPage() {
       setLoading(false)
     } catch (error) {
       console.log('error: ', error)
+      alert(error.message)
     } finally {
       console.log("hola");
     }
@@ -29,12 +30,13 @@ function ImageGeneratorPage() {
     try {
       if (!prompt) return alert('Please enter a prompt')
       const response = await axios.post('/api/generate', { prompt })
-      // console.log('Response:', response.data)
+      console.log('Response:', response.data)
       setData(response.data.output[0])
-      // console.log('data: ', data)
+      console.log('data: ', data)
     } catch (error) {
       console.log('Error:', error)
       setError(error.message)
+      alert(error.message)
     } finally {
       setLoading(false)
     }

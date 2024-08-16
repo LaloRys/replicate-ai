@@ -9,6 +9,8 @@ const nextConfig = {
         pathname: '/pbxt/**', // Ajusta el pathname según el patrón de tus URLs
       },
     ],
+    
+    domains: ['images.pexels.com'],
   },
 };
 
